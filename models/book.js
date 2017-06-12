@@ -8,9 +8,11 @@ var mongoose	 = require('mongoose'),
 		author: {type: Schema.ObjectId, ref:'Author', required: true},
 		summary: {type: String, required: true},
 		isbn: {type: String, required: true},
-		author: [{type: Schema.ObjectId, ref:'Genre'}]
+		genre: [{type: Schema.ObjectId, ref:'Genre'}]
 
 	});
+
+	//console.log(this.title);
 
 
 
@@ -18,7 +20,7 @@ var mongoose	 = require('mongoose'),
 	BookSchema
 	.virtual('url')
 	.get(function(){
-		return '/catalogue/book/ ' + this._id;
+		return '/catalog/book/ ' + this._id;
 	});
 
 

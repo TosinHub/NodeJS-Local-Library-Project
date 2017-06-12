@@ -16,7 +16,7 @@ var mongoose	 = require('mongoose'),
 	GenreSchema
 	.virtual('url')
 	.get(function(){
-		return '/catalogue/genre/ ' + this._id;
+		return '/catalog/genre/ ' + this._id;
 	});
 
 
